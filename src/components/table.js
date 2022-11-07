@@ -32,9 +32,9 @@ const DataTable = () => {
 
   const loadData = async () => {
     setLoading(true);
-    const response = await axios.get("http://localhost:5000/github");
-    console.log(response?.data.forEach((obj) => console.log(obj.name)));
-    setGridData(response.data);
+    const response = await axios.get("https://www.jsonkeeper.com/b/ULXU");
+    console.log(response?.data.github.forEach((obj) => console.log(obj.name)));
+    setGridData(response.data.github);
     setLoading(false);
   };
   // Setting table dragable body
